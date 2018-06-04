@@ -1,0 +1,7 @@
+    Prefix Verb   URI Pattern         Controller#Action
+cass_index GET    /cass(.:format)     cass#index
+           POST   /cass(.:format)     cass#create
+      cass GET    /cass/:id(.:format) cass#show
+           PATCH  /cass/:id(.:format) cass#update
+           PUT    /cass/:id(.:format) cass#update
+           DELETE /cass/:id(.:format) cass#destroy
