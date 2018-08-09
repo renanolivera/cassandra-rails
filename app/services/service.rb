@@ -33,7 +33,6 @@ class Service
     end
   end
 
-
   def insert(first_name, last_name)
     begin
       statement = @session.prepare('INSERT INTO user (first_name, last_name) VALUES (?, ?)')
@@ -42,17 +41,6 @@ class Service
     rescue => e
       puts e.to_s
     end''
-  end
-
-
-  def insert(first_name, last_name)
-    begin
-      statement = @session.prepare('INSERT INTO user (first_name, last_name) VALUES (?, ?)')
-      @msg = @session.execute(statement, arguments: [first_name, last_name])
-      return @msg
-    rescue => e
-      puts e.to_s
-    end
   end
 
   def delete(first_name)
